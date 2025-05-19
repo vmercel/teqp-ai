@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Earthquake Predictions</h1>
+        <p class="disclaimer">Note: This is a mock demonstration. Earthquake prediction is not currently scientifically possible.</p>
+        
+        <div class="predictions">
+            {% for quake in earthquakes %}
+            <div class="prediction-card">
+                <h3>{{ quake.location }}</h3>
+                <p><strong>Magnitude:</strong> {{ quake.magnitude }} Richter</p>
+                <p><strong>Predicted Date:</strong> {{ quake.date }}</p>
+                <p><strong>Confidence:</strong> {{ quake.confidence }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
